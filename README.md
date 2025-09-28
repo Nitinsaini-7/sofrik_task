@@ -40,7 +40,7 @@ project-management-app/
 │   │   ├── routes/        # Express routes
 │   │   ├── middleware/    # JWT auth middleware
 │   │   ├── config/        # DB connection
-│   │   ├── index.js       # App entry
+│   │   ├── server.js       # App entry
 │   │   └── seed.js        # Seeder script
 │
 └── frontend/       # React + TS + Vite + Tailwind
