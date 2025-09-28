@@ -58,8 +58,8 @@ project-management-app/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/project-management-app.git
-cd project-management-app
+git clone https://github.com/Nitinsaini-7/sofrik_task.git
+cd sofrik_task
 ```
 
 ---
@@ -68,19 +68,22 @@ cd project-management-app
 ```bash
 cd backend
 npm install
-cp .env.example .env   # Update values if needed
+cp .env   # Update values if needed
+MONGO_URI=mongodb://localhost:27017/sofrikTask
+JWT_SECRET=secret@123
+PORT=5000
 ```
 
 #### Run development server
 ```bash
-npm run dev
+node server.js or nodemon server.js
+```
+#### Run seed script
+```bash
+node seed.js
 ```
 Backend will start at `http://localhost:5000`
 
-#### Run seed script
-```bash
-npm run seed
-```
 
 This will insert:
 
@@ -107,7 +110,7 @@ VITE_API_BASE=http://localhost:5000
 ```bash
 npm run dev
 ```
-Frontend will start at `http://localhost:3000`
+Frontend will start at `http://localhost:5173`
 
 ---
 
@@ -118,19 +121,6 @@ Use these to login after running the seed script:
 Email: test@example.com
 Password: Test@123
 ```
-
----
-
-## 📸 Screenshots (Optional)
-*(Add screenshots of login, dashboard, and project details after running the app)*
-
----
-
-## 🧪 Bonus Ideas
-- ✅ Form validation (React Hook Form + Yup)  
-- ✅ Pagination & search for projects  
-- ✅ Unit tests (Jest)  
-- ✅ Dockerize backend & frontend  
 
 ---
 
