@@ -11,8 +11,7 @@ const app = express();
 
 // Allowed origins
 const allowedOrigins = [
-  "http://localhost:5173",        // Vite local dev
-  "https://sofrik-task-hs1f.vercel.app" // Replace with your actual Vercel frontend URL
+  process.env.CORS // Replace with your actual Vercel frontend URL
 ];
 
 // CORS options
