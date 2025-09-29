@@ -5,8 +5,8 @@ import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import toast from "react-hot-toast";
 
 export default function Login() {
-  const [email, setEmail] = useState("test@example.com");
-  const [password, setPassword] = useState("Test@123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const nav = useNavigate();
