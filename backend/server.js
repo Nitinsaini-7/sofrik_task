@@ -9,7 +9,25 @@ import taskRoutes from "./routes/task-routes.js";
 dotenv.config();
 const app = express();
 
-app.use(cors());
+// Allowed origins
+const allowedOrigins = [
+  "http://localhost:5173",        // Vite local dev
+  "https://sofrik-task-hs1f.vercel.app" // Replace with your actual Vercel frontend URL
+];
+
+// CORS options
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("❌ Not allowed by CORS"));
+    }
+  },
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes
